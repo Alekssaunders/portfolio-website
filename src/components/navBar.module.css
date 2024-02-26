@@ -1,0 +1,22 @@
+.navLinksContainer {
+    padding: 2vh 0;
+}
+
+.navList {
+    list-style: none;
+    font-size: 112.5%;
+    padding-top: 2vh
+}
+
+.navLink {
+    color: #cbd5e0;
+    text-decoration: none;
+    font-size: 115%;
+    transition: all 500ms;
+}
+
+.navLink:hover {
+    color: #ffa9b7;
+    font-size: 150%;
+    transition: all 500ms;
+}

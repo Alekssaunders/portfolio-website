@@ -1,0 +1,98 @@
+.contentContainer {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+.pageDividerContainer {
+    grid-area: 1 / 1 / 4 / 2;
+    height: auto;
+}
+
+.headerContainer {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.title {
+    color: #F29559;
+    font-size: 625%;
+    margin-left: 5vw;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    color: #F2D492;
+    font-size: 312.5%;
+    margin-left: 5vw;
+    margin-top: 0;
+}
+
+.mainContentContainer {
+    grid-area: 2 / 2 / 4 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0;
+}
+
+.pixelArtContainer {
+    height: 32vh;
+    width: 7vw;
+    position: relative;
+    top: -2vh;
+    left: -2vw;
+    float: left;
+    border: solid 2px red;
+}
+
+.textBox {
+    height: auto;
+    margin-left: 5vw;
+    grid-column: 1 / 2;
+}
+
+.textBoxContent {
+    margin: 0 3vw;
+    font-size: 125%;
+    color: #cbd5e0;
+    font-weight: 200;
+}
+
+.iconContainer {
+    padding: 2vh 2vw 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.5vw;
+    width: fit-content;
+
+}
+
+.skillsBox {
+    margin: 0 5vw 0 2vw;
+    height: auto;
+    grid-column: 2 / 3;
+    display: flex;
+}
+
+.column {
+    flex: 50%
+}
+
+
+.skillList {
+    color: #cbd5e0;
+    list-style: none;
+    font-size: 112.5%;
+}
+
+.skillListContainer {
+    padding: 0;
+}
+
+.skillSubtitle {
+    font-size: 125%;
+    margin-top: 0;
+    font-weight: bold;
+    color: #B8B08D;
+}
