@@ -1,10 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import CSS from './index.module.css';
+import './index.css';
 import {Image} from 'astro:assets';
 import linkedinIcon from "../assets/linkedinIcon.svg";
 import githubIcon from "../assets/githubIcon.svg";
-import NavBar from "../components/NavBar.astro"
+import NavBar from "../components/NavBar/NavBar.astro"
 
 const languages: string[] = ['Typescript', 'Python', 'Bash']
 
@@ -16,18 +16,18 @@ const libraries: string[] = ['Vite', 'Vitest', 'Jest', 'Mocha', 'Tailwind']
 
 <Layout title="Aleks Saunders Portfolio">
     <main>
-        <div className={CSS.contentContainer} class="contentContainer">
-            <div className={CSS.pageDividerContainer} class="pageDivider">
+        <div class="contentContainer">
+            <div class="pageDividerContainer">
                 <NavBar/>
             </div>
-            <div className={CSS.headerContainer} class="header">
-                <h1 className={CSS.title}>hello.</h1>
-                <h2 className={CSS.subtitle}>my name is aleks.</h2>
+            <div class="headerContainer">
+                <h1 class="title">hello.</h1>
+                <h2 class="subtitle">my name is aleks.</h2>
             </div>
-            <div className={CSS.mainContentContainer}>
-                <div className={CSS.textBox}>
-                    <div className={CSS.pixelArtContainer} class="pixelArt"></div>
-                    <p className={CSS.textBoxContent}>
+            <div class="mainContentContainer">
+                <div class="textBox">
+                    <div class="pixelArtContainer"></div>
+                    <p class="textBoxContent">
                         Hey there! I'm Aleks and I'm a full-stack engineer from London, UK.<br><br>
                         I enjoy creating [...... ....... ......] designs and [...... ...... .......]<br><br>
                         <!--With two degrees in psychology and a background in scientific research, I'm always on the hunt-->
@@ -37,34 +37,35 @@ const libraries: string[] = ['Vite', 'Vitest', 'Jest', 'Mocha', 'Tailwind']
                         <!--<br><br>-->
 
                         Oh, and I have cute dog called Mason.</p>
-                    <div className={CSS.iconContainer}>
-                        <Image src={linkedinIcon} alt="LinkedIn Icon" height="35vh" width="35vw"/>
-                        <Image src={githubIcon} alt="Github Icon" height="35vh" width="35vw"/>
+                    <div class="iconContainer">
+                        <Image src={linkedinIcon} alt="LinkedIn Icon" class="icon"/>
+                        <Image src={githubIcon} alt="Github Icon" class="icon"/>
                     </div>
                 </div>
-                <div className={CSS.skillsBox}>
-                    <div className={CSS.column}>
-                        <p className={CSS.skillSubtitle}>Languages</p>
+                <div class="skillsBox">
+                    <div class="column">
+                        <p class="skillSubtitle">Languages</p>
                         {languages.map((languages: string) => (
-                                <ul className={CSS.skillListContainer}>
-                                    <li className={CSS.skillList}>{languages}</li>
+                                <ul class="skillListContainer">
+                                    <li class="skillList">{languages}</li>
                                 </ul>
                         ))}
-                        <p className={CSS.skillSubtitle}>Frameworks</p>
+                        <p class="skillSubtitle">Frameworks</p>
                         {frameworks.map((frameworks: string) => (
-                                <ul className={CSS.skillListContainer}>
-                                    <li className={CSS.skillList}>{frameworks}</li>
+                                <ul class="skillListContainer">
+                                    <li class="skillList">{frameworks}</li>
                                 </ul>
                         ))}
                     </div>
-                    <div className={CSS.column}>
-                        <p className={CSS.skillSubtitle}>Libraries</p>
+                    <div class="column">
+                        <p class="skillSubtitle">Libraries</p>
                         {libraries.map((libraries: string) => (
-                                <ul className={CSS.skillListContainer}>
-                                    <li className={CSS.skillList}>{libraries}</li>
+                                <ul class="skillListContainer">
+                                    <li class="skillList">{libraries}</li>
                                 </ul>
                         ))}
                     </div>
+                    n
                 </div>
             </div>
         </div>

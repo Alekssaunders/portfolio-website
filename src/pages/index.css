@@ -68,6 +68,11 @@
 
 }
 
+.icon {
+    height: 34vh;
+    width: 35vw;
+}
+
 .skillsBox {
     margin: 0 5vw 0 2vw;
     height: auto;
