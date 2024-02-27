@@ -1,77 +1,77 @@
 .contentContainer {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: 1fr 3fr;
-    grid-column-gap: 0;
-    grid-row-gap: 0;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
 }
 
 .leftPageDivider {
-    display: grid;
-    grid-area: 1 / 1 / 3 / 2;
-    height: auto;
+  display: grid;
+  grid-area: 1 / 1 / 3 / 2;
+  height: auto;
 }
 
 .headerContainer {
-    display: grid;
-    grid-area: 1 / 2 / 1 / 3;
-    text-align: right;
+  display: grid;
+  grid-area: 1 / 2 / 1 / 3;
+  text-align: right;
+  padding-bottom: 2vh;
 }
 
-
 .title {
-    font-size: 625%;
-    color: #F2D492;
-    margin: 5vh 5vw;
+  font-size: 625%;
+  color: #f2d492;
+  margin: 5vh 5vw;
 }
 
 .mainContentContainer {
-    grid-area: 2 / 2 / 3 / 3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 0;
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1fr 1fr;
+  grid-column-gap: 0;
 }
 
 .textBox {
-    margin-left: 5vw;
-    grid-column: 1 / 2;
+  margin-left: 5vw;
+  grid-column: 1 / 2;
 }
 
 .textBoxContent {
-    margin: 0 3vw;
-    font-size: 125%;
-    color: #cbd5e0;
-    font-weight: 200;
+  margin: 0 3vw;
+  font-size: 125%;
+  color: #cbd5e0;
+  font-weight: 200;
 }
 
 .column {
-    flex: 50%
+  column-count: 2;
+  margin-top: 3vh;
 }
 
 .hobbyListContainer {
-    padding: 0;
+  margin: 0 0 0 4vw;
+  padding: 0.5vh 0;
 }
 
 .hobbyList {
-    color: #cbd5e0;
-    font-size: 112.5%;
+  color: pink;
+  font-size: 112.5%;
 }
 
-
 .photoContainer {
-    margin: 0 5vw 0 2vw;
-    grid-column: 2 / 3;
-    display: flex;
+  margin: 0 0 0 2vw;
+  grid-column: 2 / 3;
+  display: flex;
+  width: 419px;
 }
 
 .photo {
-    height: 450px;
-    width: 419px;
+  height: 450px;
+  width: 419px;
 }
 
 .rightPageDivider {
-    display: grid;
-    grid-area: 1 / 3 / 3 / 4;
-    height: auto;
+  display: grid;
+  grid-area: 1 / 3 / 3 / 4;
 }
-

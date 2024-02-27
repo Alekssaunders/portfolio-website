@@ -1,0 +1,93 @@
+---
+const job = [
+  {
+    title: "Software Engineer",
+    organisation: `Mason's Guide, Tired Eye Ltd.`,
+    date: "June 2023 - Present",
+    description:
+      "I am currently developing an AI-powered generative travel guide.",
+    skills: ["Typescript", "Python", "React", "Django", "Vite", "Vitest"],
+  },
+  {
+    title: "Junior software engineer",
+    organisation: "Fast Familiar",
+    date: "March 2023 - Present",
+    description:
+      "I have assisted in the installation of an interactive AI artwork, 'Looking for Love', across multiple gallery spaces, including the Science Gallery, London, and The Exchange, Birmingham. This involved developing auto-start software to allow for easy, remote maintenance of raspberry-pi devices, and physical installation testing. Risk assessment and user-testing were also key to ensure the installation was successfully complete and met all necessary accessibility regulations.",
+    skills: ["Python", "Bash"],
+  },
+  {
+    title: "Researcher",
+    organisation: `Cancer Research UK`,
+    date: "February 2023 - Present",
+    description:
+      "I currently lead on multiple projects related to cancer prevention within the Social and Behavioural Research Team. This involves identifying evidence gaps and designing robust research projects to address them, in order to inform policies on public health and cancer prevention. Conducting statistical analysis on large datasets is a key part of my role, and includes - among other responsibilities - drafting analysis plans and liasing with data scientists within the charity.",
+  },
+  {
+    title: "Evaluation Lead",
+    organisation: `Maudsley Learning, NHS`,
+    date: "September 2019 - January 2023",
+    description:
+      "As Evaluation Lead, I managed and conducted multiple research and evaluation projects within the NHS, disseminating our findings through academic publications and articles. I also supervised multiple interns, placement students, and junior researchers, helping to develop personal and professional skills while managing workloads and overseeing project completions.",
+  },
+];
+---
+
+<div class="cvContainer">
+  <div class="jobTitleContainer">
+    {
+      job.map((job) => (
+        <>
+          <h3 class="jobTitle">
+            {job.title} | {job.organisation}
+          </h3>
+          <div class="date">{job.date}</div>
+          <div class="description container">
+            <span class="description">{job.description}</span>
+            <br />
+            <div class="skillsContainer">{job.skills}</div>
+          </div>
+        </>
+      ))
+    }
+  </div>
+
+  <style>
+    .cvContainer {
+      display: grid;
+      grid-area: 2 / 1 / 3 / 3;
+      margin: 2vh 0vw 0 8vw;
+      padding-top: 3vh;
+    }
+
+    .jobTitleContainer {
+      color: #e4eef9;
+    }
+
+    .jobTitle {
+      margin: 0;
+    }
+
+    .date {
+      color: #cfdbe9;
+      font-style: italic;
+      padding: 1vh 0;
+    }
+
+    .description {
+      color: #cfdbe9;
+      padding-bottom: 5vh;
+      margin-right: 5vw;
+    }
+
+    .skillsContainer {
+      background-color: rgba(255, 255, 255, 0.2);
+      text-align: center;
+      padding: 0.5vh;
+      border-radius: 10px;
+      text-shadow: #b5b3b3 0 0 5px;
+      color: white;
+      width: fit-content;
+    }
+  </style>
+</div>

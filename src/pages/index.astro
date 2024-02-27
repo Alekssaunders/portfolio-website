@@ -1,72 +1,74 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import './index.css';
-import {Image} from 'astro:assets';
+import Layout from "../layouts/Layout.astro";
+import "./index.css";
+import { Image } from "astro:assets";
 import linkedinIcon from "../assets/images/linkedinIcon.svg";
 import githubIcon from "../assets/images/githubIcon.svg";
-import NavBar from "../components/NavBar/NavBar.astro"
+import NavBar from "../components/NavBar/NavBar.astro";
 
-const languages: string[] = ['Typescript', 'Python', 'Bash']
+const languages: string[] = ["Typescript", "Python", "Bash"];
 
-const frameworks: string[] = ['React', 'Django', 'Node']
+const frameworks: string[] = ["React", "Django", "Node"];
 
-const libraries: string[] = ['Vite', 'Vitest', 'Jest', 'Mocha', 'Tailwind']
+const libraries: string[] = ["Vite", "Vitest", "Jest", "Mocha", "Tailwind"];
 ---
 
-
 <Layout title="Aleks Saunders Portfolio">
-    <main>
-        <div class="contentContainer">
-            <div class="pageDividerContainer">
-                <NavBar/>
-            </div>
-            <div class="headerContainer">
-                <h1 class="title">hello.</h1>
-                <h2 class="subtitle">my name is aleks.</h2>
-            </div>
-            <div class="mainContentContainer">
-                <div class="textBox">
-                    <div class="pixelArtContainer"></div>
-                    <p class="textBoxContent">
-                        Hey there! I'm Aleks and I'm a full-stack engineer from London, UK.<br><br>
-                        I enjoy creating [...... ....... ......] designs and [...... ...... .......]<br><br>
-                        <!--With two degrees in psychology and a background in scientific research, I'm always on the hunt-->
-                        <!--to learn more. <br><br>-->
-                        <!--Software engineering first caught my eye from a data analysis angle, and evolved-->
-                        <!--to become a love of just making things.-->
-                        <!--<br><br>-->
-
-                        Oh, and I have cute dog called Mason.</p>
-                    <div class="iconContainer">
-                        <Image src={linkedinIcon} alt="LinkedIn Icon" class="icon"/>
-                        <Image src={githubIcon} alt="Github Icon" class="icon"/>
-                    </div>
-                </div>
-                <div class="skillsBox">
-                    <div class="column">
-                        <p class="skillSubtitle">Languages</p>
-                        {languages.map((languages: string) => (
-                                <ul class="skillListContainer">
-                                    <li class="skillList">{languages}</li>
-                                </ul>
-                        ))}
-                        <p class="skillSubtitle">Frameworks</p>
-                        {frameworks.map((frameworks: string) => (
-                                <ul class="skillListContainer">
-                                    <li class="skillList">{frameworks}</li>
-                                </ul>
-                        ))}
-                    </div>
-                    <div class="column">
-                        <p class="skillSubtitle">Libraries</p>
-                        {libraries.map((libraries: string) => (
-                                <ul class="skillListContainer">
-                                    <li class="skillList">{libraries}</li>
-                                </ul>
-                        ))}
-                    </div>
-                </div>
-            </div>
+  <main>
+    <div class="contentContainer">
+      <div class="pageDividerContainer">
+        <NavBar />
+      </div>
+      <div class="headerContainer">
+        <h1 class="title">hello.</h1>
+        <h2 class="subtitle">my name is aleks.</h2>
+      </div>
+      <div class="mainContentContainer">
+        <div class="textBox">
+          <div class="pixelArtContainer"></div>
+          <p class="textBoxContent">
+            Hey there! I'm Aleks and I'm a full-stack engineer from London, UK.<br
+            /><br />
+            I enjoy creating [...... ....... ......] designs and [...... ...... .......]<br
+            /><br />
+            Oh, and I have cute dog called Mason.
+          </p>
+          <div class="iconContainer">
+            <Image src={linkedinIcon} alt="LinkedIn Icon" class="icon" />
+            <Image src={githubIcon} alt="Github Icon" class="icon" />
+          </div>
         </div>
-    </main>
+        <div class="skillsBox">
+          <div class="column">
+            <p class="skillSubtitle">Languages</p>
+            {
+              languages.map((languages: string) => (
+                <ul class="skillListContainer">
+                  <li class="skillList">{languages}</li>
+                </ul>
+              ))
+            }
+            <p class="skillSubtitle">Frameworks</p>
+            {
+              frameworks.map((frameworks: string) => (
+                <ul class="skillListContainer">
+                  <li class="skillList">{frameworks}</li>
+                </ul>
+              ))
+            }
+          </div>
+          <div class="column">
+            <p class="skillSubtitle">Libraries</p>
+            {
+              libraries.map((libraries: string) => (
+                <ul class="skillListContainer">
+                  <li class="skillList">{libraries}</li>
+                </ul>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </Layout>
