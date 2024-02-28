@@ -17,14 +17,14 @@
 .title {
   color: #f29559;
   font-size: 625%;
-  margin-left: 5vw;
+  margin-left: var(--spacer-3xl);
   margin-bottom: 0;
 }
 
 .subtitle {
   color: #f2d492;
   font-size: 312.5%;
-  margin-left: 5vw;
+  margin-left: var(--spacer-3xl);
   margin-top: 0;
 }
 
@@ -46,22 +46,22 @@
 }
 
 .textBox {
-  margin-left: 5vw;
+  margin-left: var(--spacer-2xl);
   grid-column: 1 / 2;
 }
 
 .textBoxContent {
-  margin: 0 3vw;
+  margin: 0 var(--spacer-3xl);
   font-size: 125%;
   color: #cbd5e0;
   font-weight: 200;
 }
 
 .iconContainer {
-  padding: 2vh 2vw 0 0;
+  padding: var(--spacer-m) 0 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 0.5vw;
+  grid-gap: var(--spacer-s);
   width: fit-content;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .skillsBox {
-  margin: 0 5vw 0 2vw;
+  margin: 0 var(--spacer-3xl) 0 var(--spacer-xl);
   grid-column: 2 / 3;
   display: flex;
 }

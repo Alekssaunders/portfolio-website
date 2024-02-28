@@ -22,6 +22,7 @@ const job = [
     date: "February 2023 - Present",
     description:
       "I currently lead on multiple projects related to cancer prevention within the Social and Behavioural Research Team. This involves identifying evidence gaps and designing robust research projects to address them, in order to inform policies on public health and cancer prevention. Conducting statistical analysis on large datasets is a key part of my role, and includes - among other responsibilities - drafting analysis plans and liasing with data scientists within the charity.",
+    skills: ["R", "Python"],
   },
   {
     title: "Evaluation Lead",
@@ -29,6 +30,7 @@ const job = [
     date: "September 2019 - January 2023",
     description:
       "As Evaluation Lead, I managed and conducted multiple research and evaluation projects within the NHS, disseminating our findings through academic publications and articles. I also supervised multiple interns, placement students, and junior researchers, helping to develop personal and professional skills while managing workloads and overseeing project completions.",
+    skills: ["R", "Python"],
   },
 ];
 ---
@@ -56,8 +58,8 @@ const job = [
     .cvContainer {
       display: grid;
       grid-area: 2 / 1 / 3 / 3;
-      margin: 2vh 0vw 0 8vw;
-      padding-top: 3vh;
+      margin: 0 0 0 var(--spacer-5xl);
+      padding-top: var(--spacer-1xl);
     }
 
     .jobTitleContainer {
@@ -71,19 +73,20 @@ const job = [
     .date {
       color: #cfdbe9;
       font-style: italic;
-      padding: 1vh 0;
+      padding: var(--spacer-m) 0;
     }
 
     .description {
       color: #cfdbe9;
-      padding-bottom: 5vh;
-      margin-right: 5vw;
+      padding-bottom: var(--spacer-2xl);
+      margin-right: var(--spacer-2xl);
     }
 
     .skillsContainer {
       background-color: rgba(255, 255, 255, 0.2);
       text-align: center;
-      padding: 0.5vh;
+      padding: var(--spacer-s) var(--spacer-m);
+      margin-top: var(--spacer-m);
       border-radius: 10px;
       text-shadow: #b5b3b3 0 0 5px;
       color: white;

@@ -15,13 +15,13 @@
   display: grid;
   grid-area: 1 / 2 / 1 / 3;
   text-align: right;
-  padding-bottom: 2vh;
+  padding-bottom: var(--spacer-l);
 }
 
 .title {
   font-size: 625%;
   color: #f2d492;
-  margin: 5vh 5vw;
+  margin: var(--spacer-1xl) var(--spacer-3xl);
 }
 
 .mainContentContainer {
@@ -33,12 +33,12 @@
 }
 
 .textBox {
-  margin-left: 5vw;
+  margin-left: var(--spacer-3xl);
   grid-column: 1 / 2;
 }
 
 .textBoxContent {
-  margin: 0 3vw;
+  margin: 0 var(--spacer-1xl);
   font-size: 125%;
   color: #cbd5e0;
   font-weight: 200;
@@ -46,12 +46,12 @@
 
 .column {
   column-count: 2;
-  margin-top: 3vh;
+  margin-top: var(--spacer-xl); 
 }
 
 .hobbyListContainer {
-  margin: 0 0 0 4vw;
-  padding: 0.5vh 0;
+  margin: 0 0 0 var(--spacer-2xl);
+  padding: var(--spacer-s) 0;
 }
 
 .hobbyList {
@@ -60,7 +60,7 @@
 }
 
 .photoContainer {
-  margin: 0 0 0 2vw;
+  margin: 0 0 0 var(--spacer-xl);
   grid-column: 2 / 3;
   display: flex;
   width: 419px;
