@@ -5,7 +5,6 @@ import { Image } from "astro:assets";
 import linkedinIcon from "../assets/images/linkedinIcon.svg";
 import githubIcon from "../assets/images/githubIcon.svg";
 import NavBar from "../components/NavBar/NavBar.astro";
-import { Image } from "astro:assets";
 import AleksSprite from "../assets/images/AleksSprite.png";
 
 const languages: string[] = ["Typescript", "Python", "Bash"];
@@ -26,7 +25,6 @@ const libraries: string[] = ["Vite", "Vitest", "Jest", "Mocha", "Tailwind"];
         <h2 class="subtitle">my name is aleks.</h2>
       </div>
       <div class="mainContentContainer">
-
         <div class="textBox">
           <p class="textBoxContent">
             Hey there! I'm Aleks and I'm a full-stack engineer from London, UK.<br
@@ -55,10 +53,10 @@ const libraries: string[] = ["Vite", "Vitest", "Jest", "Mocha", "Tailwind"];
             </p>
           </div>
           <Image
-          src={AleksSprite}
-          alt="pixel sprite drawing of me standing holding a macbook"
-          class="pixelArt"
-        />
+            src={AleksSprite}
+            alt="pixel sprite drawing of me standing holding a macbook"
+            class="pixelArt"
+          />
         </div>
         <div class="skillsBox">
           <div class="column">
