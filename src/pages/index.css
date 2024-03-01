@@ -1,60 +1,47 @@
-.contentContainer {
+.pageDivider {
   display: grid;
-  grid-template-columns: 1.2fr 5fr;
-  grid-template-rows: 1fr 5fr;
-  grid-column-gap: 0;
-  grid-row-gap: 0;
+  grid-template-columns: 1.2fr max-content 5fr;
 }
 
-.pageDividerContainer {
-  grid-area: 1 / 1 / 6 / 2;
+.aleksImage {
+  padding-top: var(--spacer-6xl);
 }
 
-.headerContainer {
-  grid-area: 1 / 2 / 2 / 3;
+.pageContainer {
+  padding-left: var(--spacer-m);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: max-content;
+  gap: var(--spacer-1xl);
+}
+
+.textContainer {
+  width: 100%;
+  max-width: 500px;
+  font-size: 115%;
+  color: #cbd5e0;
+  font-weight: 200;
+}
+
+.welcomeBlock {
+  width: fit-content;
+  margin-left: -70px;
 }
 
 .title {
   color: #f29559;
   font-size: 625%;
-  margin-left: var(--spacer-4xl);
   margin-bottom: 0;
 }
 
 .subtitle {
   color: #f2d492;
   font-size: 312.5%;
-  margin-left: var(--spacer-4xl);
-  margin-top: 0;
-  margin-bottom: var(--spacer-xl);
-}
-
-.mainContentContainer {
-  grid-area: 2 / 2 / 6 / 3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 0;
-}
-
-.pixelArt {
-  height: 600px;
-  width: 230px;
-  position: relative;
-  top: -66vh;
-  left: -7vw;
-  float: left;
-  padding-right: 30px;
-}
-
-.textBox {
-  margin-left: var(--spacer-xl);
+  margin: 0;
 }
 
 .textBoxContent {
-  margin: 0 var(--spacer-4xl) 0 var(--spacer-6xl);
-  font-size: 115%;
-  color: #cbd5e0;
-  font-weight: 200;
+  margin-top: 0;
 }
 
 .iconContainer {
@@ -63,7 +50,6 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: var(--spacer-s);
   width: fit-content;
-  margin: var(--spacer-xs) var(--spacer-6xl);
 }
 
 .icon {
@@ -75,7 +61,6 @@
 .artCredit {
   color: #cbd5e0;
   font-size: 12px;
-  margin: var(--spacer-xs) var(--spacer-6xl);
 }
 
 .artistName {
@@ -88,9 +73,9 @@
 }
 
 .skillsBox {
-  margin: 0 var(--spacer-3xl) 0 var(--spacer-xl);
-  grid-column: 2 / 3;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacer-3xl);
 }
 
 .column {
@@ -112,4 +97,16 @@
   margin-top: 0;
   font-weight: bold;
   color: #c9c19f;
+}
+
+.welcomeSkillsGrid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--spacer-4xl);
+  width: fit-content;
+}
+
+.pixelArt {
+  height: 600px;
+  width: 230px;
 }

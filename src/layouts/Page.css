@@ -1,0 +1,14 @@
+.pageContainerTemplate {
+	display: grid;
+	grid-template-columns: 1fr 2.5fr 1fr;
+}
+
+.pageContainerHeader {
+	text-align: right;
+}
+
+.title {
+  font-size: 625%;
+  color: #f2d492;
+  margin: var(--spacer-1xl) -80px var(--spacer-2xl) 0;
+}

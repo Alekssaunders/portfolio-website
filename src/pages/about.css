@@ -1,44 +1,15 @@
 .contentContainer {
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: 1fr 5fr;
   grid-column-gap: 0;
   grid-row-gap: 0;
 }
 
-.leftPageDivider {
-  display: grid;
-  grid-area: 1 / 1 / 3 / 2;
-  height: auto;
-}
-
-.headerContainer {
-  display: grid;
-  grid-area: 1 / 2 / 1 / 3;
-  text-align: right;
-  padding-bottom: var(--spacer-l);
-}
-
-.title {
-  font-size: 625%;
-  color: #f2d492;
-  margin: var(--spacer-1xl) var(--spacer-3xl);
-}
-
-.mainContentContainer {
-  grid-area: 2 / 2 / 3 / 3;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-row: 1fr 1fr;
-  grid-column-gap: 0;
-}
-
-.textBox {
-  margin-left: var(--spacer-3xl);
-  grid-column: 1 / 2;
+.aboutIntroText {
+  margin-top: 0;
 }
 
 .textBoxContent {
-  margin: 0 var(--spacer-1xl);
   font-size: 125%;
   color: #cbd5e0;
   font-weight: 200;
@@ -46,24 +17,21 @@
 
 .column {
   column-count: 2;
-  margin-top: var(--spacer-xl); 
+  margin-top: var(--spacer-xl);
 }
 
 .hobbyListContainer {
-  margin: 0 0 0 var(--spacer-2xl);
-  padding: var(--spacer-s) 0;
+  margin: 0 0 0 0;
+  padding: var(--spacer-s) var(--spacer-l);
 }
 
 .hobbyList {
   color: pink;
-  font-size: 112.5%;
 }
 
 .photoContainer {
-  margin: 0 0 0 var(--spacer-xl);
-  grid-column: 2 / 3;
-  display: flex;
   width: 419px;
+  justify-self: flex-end;
 }
 
 .photo {
@@ -74,4 +42,10 @@
 .rightPageDivider {
   display: grid;
   grid-area: 1 / 3 / 3 / 4;
+}
+
+.aboutPageTemplate {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacer-3xl);
 }
