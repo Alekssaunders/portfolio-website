@@ -8,84 +8,86 @@ import NavBar from "../components/NavBar/NavBar.astro";
 import AleksSprite from "../assets/images/AleksSprite.png";
 
 const languages: string[] = ["Typescript", "Python", "Bash"];
-
 const frameworks: string[] = ["React", "Django", "Node"];
-
 const libraries: string[] = ["Vite", "Vitest", "Jest", "Mocha", "Tailwind"];
 ---
 
 <Layout title="Aleks Saunders Portfolio">
   <main>
-    <div class="contentContainer">
-      <div class="pageDividerContainer">
-        <NavBar />
+    <div class="pageDivider">
+      <NavBar />
+      <div class="aleksImage">
+        <Image
+          src={AleksSprite}
+          alt="pixel sprite drawing of me standing holding a macbook"
+          class="pixelArt"
+        />
       </div>
-      <div class="headerContainer">
-        <h1 class="title">hello.</h1>
-        <h2 class="subtitle">my name is aleks.</h2>
-      </div>
-      <div class="mainContentContainer">
-        <div class="textBox">
-          <p class="textBoxContent">
-            Hey there! I'm Aleks and I'm a full-stack engineer from London, UK.<br
-            /><br />
-            I enjoy making creative, scalable, and user-friendly products that leave
-            a lasting impression. <br /><br />Following a career change from
-            psychology, I'm continually pushing my own boundaries to craft
-            simple but effective code.
-            <br /><br />
-            Oh, and I have cute dog called Mason.
-          </p>
-          <div class="iconContainer">
-            <a href="https://www.linkedin.com/in/aleks-saunders-93219a198/"
-              ><Image src={linkedinIcon} alt="LinkedIn Icon" class="icon" /></a
-            >
-            <a href="https://github.com/alekssaunders"
-              ><Image src={githubIcon} alt="Github Icon" class="icon" /></a
-            >
-          </div>
-          <div class="artCredit">
-            <p>
-              art by <a
-                href="https://ashleykerins.wixsite.com/ashkerins/"
-                class="artistName">ash kerins</a
-              >
-            </p>
-          </div>
-          <Image
-            src={AleksSprite}
-            alt="pixel sprite drawing of me standing holding a macbook"
-            class="pixelArt"
-          />
+      <div class="pageContainer">
+        <div class="welcomeBlock">
+          <h1 class="title">hello.</h1>
+          <h2 class="subtitle">my name is aleks.</h2>
         </div>
-        <div class="skillsBox">
-          <div class="column">
-            <p class="skillSubtitle">Languages</p>
-            {
-              languages.map((languages: string) => (
-                <ul class="skillListContainer">
-                  <li class="skillList">{languages}</li>
-                </ul>
-              ))
-            }
-            <p class="skillSubtitle">Frameworks</p>
-            {
-              frameworks.map((frameworks: string) => (
-                <ul class="skillListContainer">
-                  <li class="skillList">{frameworks}</li>
-                </ul>
-              ))
-            }
+        
+        <div class="welcomeSkillsGrid">
+          <div class="textContainer">
+            <p class="textBoxContent">
+              Hey there! I'm Aleks and I'm a full-stack engineer from London, UK.</p>
+            <p>
+              I enjoy making creative, scalable, and user-friendly products that leave a lasting impression.
+            </p>
+            <p>
+              Following a career change from psychology, I'm continually pushing my own boundaries to craft simple but effective code.
+            </p>
+            <p>
+              Oh, and I have cute dog called Mason.
+            </p>
+            <div class="iconContainer">
+              <a href="https://www.linkedin.com/in/aleks-saunders-93219a198/"
+                ><Image src={linkedinIcon} alt="LinkedIn Icon" class="icon" /></a
+              >
+              <a href="https://github.com/alekssaunders"
+                ><Image src={githubIcon} alt="Github Icon" class="icon" /></a
+              >
+            </div>
+            <div class="artCredit">
+              <p>
+                art by <a
+                  href="https://ashleykerins.wixsite.com/ashkerins/"
+                  class="artistName">ash kerins</a
+                >
+              </p>
+            </div>
           </div>
-          <div class="column">
-            <p class="skillSubtitle">Libraries</p>
-            {
-              libraries.map((libraries: string) => (
-                <ul class="skillListContainer">
-                  <li class="skillList">{libraries}</li>
-                </ul>
-              ))
-            }
+          <div class="skillsBox">
+            <div class="column">
+              <p class="skillSubtitle">Languages</p>
+              {
+                languages.map((languages: string) => (
+                  <ul class="skillListContainer">
+                    <li class="skillList">{languages}</li>
+                  </ul>
+                ))
+              }
+              <p class="skillSubtitle">Frameworks</p>
+              {
+                frameworks.map((frameworks: string) => (
+                  <ul class="skillListContainer">
+                    <li class="skillList">{frameworks}</li>
+                  </ul>
+                ))
+              }
+            </div>
+            <div class="column">
+              <p class="skillSubtitle">Libraries</p>
+              {
+                libraries.map((libraries: string) => (
+                  <ul class="skillListContainer">
+                    <li class="skillList">{libraries}</li>
+                  </ul>
+                ))
+              }
+            </div>
           </div>
         </div>
       </div>

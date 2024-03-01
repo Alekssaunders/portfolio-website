@@ -1,5 +1,13 @@
 ---
-const job = [
+type TJob = {
+  title: string;
+  organisation: string;
+  date: string;
+  description: string;
+  skills: string[];
+};
+
+const job: TJob[] = [
   {
     title: "Software Engineer",
     organisation: `Mason's Guide, Tired Eye Ltd.`,
@@ -46,8 +54,13 @@ const job = [
           <div class="date">{job.date}</div>
           <div class="description container">
             <span class="description">{job.description}</span>
-            <br />
-            <div class="skillsContainer">{job.skills}</div>
+            <div class="skillContainer">
+              {
+                job.skills.map((skill: string) => (
+                  <div class="skillPip">{skill}</div>
+                ))
+              }
+            </div>
           </div>
         </>
       ))
@@ -56,9 +69,7 @@ const job = [
 
   <style>
     .cvContainer {
-      display: grid;
-      grid-area: 2 / 1 / 3 / 3;
-      margin: 0 0 0 var(--spacer-5xl);
+      margin: 0 0 0 0;
       padding-top: var(--spacer-1xl);
     }
 
@@ -80,12 +91,11 @@ const job = [
     .description {
       color: #cfdbe9;
       padding-bottom: var(--spacer-2xl);
-      margin-right: var(--spacer-2xl);
       font-weight: 200;
       line-height: 150%;
     }
 
-    .skillsContainer {
+    .skillPip {
       background-color: rgba(255, 255, 255, 0.2);
       text-align: center;
       padding: var(--spacer-s) var(--spacer-m);
@@ -94,6 +104,11 @@ const job = [
       text-shadow: #b5b3b3 0 0 5px;
       color: white;
       width: fit-content;
+    }
+    
+    .skillContainer {
+      display: flex;
+      gap: var(--spacer-m);
     }
   </style>
 </div>
