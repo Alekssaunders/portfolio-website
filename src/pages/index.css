@@ -3,16 +3,12 @@
   grid-template-columns: 1.2fr max-content 5fr;
 }
 
-.aleksImage {
-  padding-top: var(--spacer-6xl);
-}
-
 .pageContainer {
   padding-left: var(--spacer-m);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: max-content;
-  gap: var(--spacer-1xl);
+  gap: var(--spacer-xl);
 }
 
 .textContainer {
@@ -26,6 +22,13 @@
 .welcomeBlock {
   width: fit-content;
   margin-left: -70px;
+}
+
+.welcomeSkillsGrid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--spacer-4xl);
+  width: fit-content;
 }
 
 .title {
@@ -72,41 +75,137 @@
   color: #b8b08d;
 }
 
-.skillsBox {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacer-3xl);
-}
-
-.column {
-  flex: 50%;
-}
-
-.skillList {
-  color: #cbd5e0;
-  list-style: none;
-  font-size: 112.5%;
-}
-
-.skillListContainer {
-  padding: 0;
-}
-
-.skillSubtitle {
-  font-size: 125%;
-  margin-top: 0;
-  font-weight: bold;
-  color: #c9c19f;
-}
-
-.welcomeSkillsGrid {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  gap: var(--spacer-4xl);
-  width: fit-content;
+.aleksImage {
+  padding-top: var(--spacer-6xl);
 }
 
 .pixelArt {
   height: 600px;
-  width: 230px;
+  width: 231px;
+}
+
+@media only screen and (max-width: 1350px) {
+  .welcomeSkillsGrid {
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    width: fit-content;
+    gap: var(--spacer-xl);
+  }
+
+  .skillsBox {
+    grid-row: 2 / 3;
+  }
+
+  .aleksImage {
+    padding-top: var(--spacer-4xl);
+  }
+
+  .pageContainer {
+    padding-left: var(--spacer-xl);
+  }
+
+  @media only screen and (max-width: 915px) {
+    .pageDivider {
+      display: grid;
+      grid-template-columns: 0.5fr 1fr;
+      grid-template-rows: max-content 1fr;
+    }
+
+    .title {
+      margin-top: 10px;
+    }
+
+    .pageContainer {
+      padding-left: var(--spacer-xl);
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: max-content;
+      gap: var(--spacer-1xl);
+    }
+
+    .aleksImage {
+      grid-column: 1 / 2;
+      padding-top: var(--spacer-3xl);
+      padding-left: var(--spacer-2xl);
+    }
+  }
+  .welcomeSkillsGrid {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-template-rows: max-content 1fr;
+    width: fit-content;
+    gap: var(--spacer-xl);
+  }
+
+  @media only screen and (max-width: 830px) {
+    .aleksImage {
+      padding-left: var(--spacer-1xl);
+    }
+  }
+  .textContainer {
+    width: 100%;
+    max-width: 400px;
+    font-size: 115%;
+    color: #cbd5e0;
+    font-weight: 200;
+  }
+
+  .title {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 705px) {
+  .pageDivider {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: max-content 1fr;
+
+    .welcomeBlock {
+      width: fit-content;
+      margin-left: 0;
+    }
+
+    .pageContainer {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      gap: var(--spacer-m);
+    }
+
+    .textContainer {
+      width: 100%;
+      max-width: 200px;
+    }
+
+    .aleksImage {
+      padding-left: var(--spacer-2xl);
+      padding-top: var(--spacer-6xl);
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+    }
+
+    .title {
+      margin-top: 0;
+    }
+
+    .subtitle {
+      margin-top: -15px;
+    }
+
+    .skillsBox {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row: 2 / 3;
+      gap: var(--spacer-m);
+    }
+
+    .aleksImage {
+      margin-top: var(--spacer-xl);
+    }
+
+    .pixelArt {
+      height: 550px;
+      width: 211px;
+    }
+  }
 }

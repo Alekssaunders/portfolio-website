@@ -1,47 +1,64 @@
 ---
 const navbar = [
-  {
-    href: "/",
-    name: "home",
-  },
-  {
-    href: "/about",
-    name: "about",
-  },
+    {
+        href: "/",
+        name: "home",
+    },
+    {
+        href: "/about",
+        name: "about",
+    },
 ];
 ---
 
-<div class="navLinksContainers">
-  {
-    navbar.map((navbar) => (
-      <ul>
-        <li class="navList">
-          <a class="navLink" href={navbar.href}>
-            {navbar.name}
-          </a>
-        </li>
-      </ul>
-    ))
-  }
+<div class="navLinkContainer">
+    {
+        navbar.map((navbar) => (
+                <ul>
+                    <li class="navList">
+                        <a class="navLink" href={navbar.href}>
+                            {navbar.name}
+                        </a>
+                    </li>
+                </ul>
+        ))
+    }
 </div>
 
 <style>
-  .navList {
-    list-style: none;
-    font-size: 112.5%;
-    padding-top: var(--spacer-l);
-  }
+    .navList {
+        list-style: none;
+        font-size: 112.5%;
+        padding-top: var(--spacer-l);
+    }
 
-  .navLink {
-    color: #cbd5e0;
-    text-decoration: none;
-    font-size: 115%;
-    transition: all 500ms;
-  }
+    .navLink {
+        color: #cbd5e0;
+        text-decoration: none;
+        font-size: 115%;
+        transition: all 500ms;
+    }
 
-  .navLink:hover {
-    color: #ffa9b7;
-    font-size: 150%;
-    transition: all 500ms;
-  }
+    .navLink:hover {
+        color: #ffa9b7;
+        font-size: 150%;
+        transition: all 500ms;
+    }
+
+
+    @media only screen and (max-width: 915px) {
+        .navList {
+            float: right;
+            display: inline;
+        }
+
+        .navLink {
+            padding: var(--spacer-l);
+        }
+
+        .navLinkContainer {
+            grid-column: 2 / 3;
+        }
+    }
+
 </style>

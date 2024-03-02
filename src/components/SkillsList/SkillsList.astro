@@ -1,0 +1,85 @@
+---
+type TSkills = {
+    skillType: string;
+    name: string[];
+}
+
+const skills: ({ skillType: string; name: string[] })[] = [
+    {
+        skillType: "Languages",
+        name: ["Typescript", "Python", "Bash"]
+    },
+    {
+        skillType: "Frameworks",
+        name: ["React", "Django", "Node"]
+    },
+    {
+        skillType: "Libraries",
+        name: ["Vite", "Vitest", "Jest", "Mocha", "Tailwind"]
+    }
+]
+---
+
+<div class="skillsBox">
+    {
+        skills.map((skills: TSkills) => (
+                <div class="skillGridContainer">
+                    <p class="skillSubtitle">{skills.skillType}</p>
+                    <ul class="skillListContainer">
+                        {
+                            skills.name.map((name: string) => (
+                                    <li class="skillList">{name}</li>
+                            ))
+                        }
+                    </ul>
+                </div>
+        ))
+    }
+</div>
+
+<style>
+    .skillsBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;;
+        column-gap: var(--spacer-3xl);
+        height: max-content;
+    }
+
+    .column {
+        flex: 50%;
+    }
+
+    .skillList {
+        color: #cbd5e0;
+        list-style: none;
+        padding-top: var(--spacer-m);
+        font-size: 112.5%;
+        height: max-content;
+    }
+
+    .skillListContainer {
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .skillSubtitle {
+        font-size: 125%;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: bold;
+        color: #c9c19f;
+    }
+
+    @media only screen and (max-width: 705px) {
+        .skillsBox {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            column-gap: var(--spacer-xl);
+            //height: max-content;
+            padding-top: var(--spacer-xl);
+        }
+    }
+</style>
+

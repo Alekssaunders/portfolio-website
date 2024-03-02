@@ -2,10 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import "./index.css";
 import { Image } from "astro:assets";
-import linkedinIcon from "../assets/images/linkedinIcon.svg";
-import githubIcon from "../assets/images/githubIcon.svg";
+import LinkedinIcon from "../assets/images/LinkedinIcon.svg";
+import GithubIcon from "../assets/images/GithubIcon.svg";
 import NavBar from "../components/NavBar/NavBar.astro";
-import AleksSprite from "../assets/images/AleksSprite.png";
+import PixelAleksGlow from "../assets/images/PixelAleksGlow.png";
+import SkillsList from '../components/SkillsList/SkillsList.astro';
 
 const languages: string[] = ["Typescript", "Python", "Bash"];
 const frameworks: string[] = ["React", "Django", "Node"];
@@ -18,7 +19,7 @@ const libraries: string[] = ["Vite", "Vitest", "Jest", "Mocha", "Tailwind"];
       <NavBar />
       <div class="aleksImage">
         <Image
-          src={AleksSprite}
+          src={PixelAleksGlow}
           alt="pixel sprite drawing of me standing holding a macbook"
           class="pixelArt"
         />
@@ -44,10 +45,10 @@ const libraries: string[] = ["Vite", "Vitest", "Jest", "Mocha", "Tailwind"];
             </p>
             <div class="iconContainer">
               <a href="https://www.linkedin.com/in/aleks-saunders-93219a198/"
-                ><Image src={linkedinIcon} alt="LinkedIn Icon" class="icon" /></a
+                ><Image src={LinkedinIcon} alt="LinkedIn Icon" class="icon" /></a
               >
               <a href="https://github.com/alekssaunders"
-                ><Image src={githubIcon} alt="Github Icon" class="icon" /></a
+                ><Image src={GithubIcon} alt="Github Icon" class="icon" /></a
               >
             </div>
             <div class="artCredit">
@@ -57,40 +58,9 @@ const libraries: string[] = ["Vite", "Vitest", "Jest", "Mocha", "Tailwind"];
                   class="artistName">ash kerins</a
                 >
               </p>
+                </div>
             </div>
-          </div>
-          <div class="skillsBox">
-            <div class="column">
-              <p class="skillSubtitle">Languages</p>
-              {
-                languages.map((languages: string) => (
-                  <ul class="skillListContainer">
-                    <li class="skillList">{languages}</li>
-                  </ul>
-                ))
-              }
-              <p class="skillSubtitle">Frameworks</p>
-              {
-                frameworks.map((frameworks: string) => (
-                  <ul class="skillListContainer">
-                    <li class="skillList">{frameworks}</li>
-                  </ul>
-                ))
-              }
-            </div>
-            <div class="column">
-              <p class="skillSubtitle">Libraries</p>
-              {
-                libraries.map((libraries: string) => (
-                  <ul class="skillListContainer">
-                    <li class="skillList">{libraries}</li>
-                  </ul>
-                ))
-              }
-            </div>
-          </div>
+          <SkillsList/>
         </div>
-      </div>
-    </div>
   </main>
 </Layout>
