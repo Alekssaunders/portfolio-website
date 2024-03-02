@@ -48,13 +48,15 @@
 
 @media only screen and (max-width: 805px) {
   .pageContainerTemplate {
-    grid-template-columns: min-content;
+    grid-template-columns: min-content min-content;
     grid-template-rows: max-content max-content 1fr;
+    display: inline-block;
   }
 
   .title {
     font-size: 625%;
     color: #f2d492;
     margin: var(--spacer-m) -80px var(--spacer-m) var(--spacer-xl);
+    display: inline-block;
   }
 }
