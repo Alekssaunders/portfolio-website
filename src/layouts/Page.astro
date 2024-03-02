@@ -4,26 +4,26 @@ import NavBar from '../components/NavBar/NavBar.astro';
 import "./Page.css";
 
 interface Props {
-  title: string;
-  header: string;
+    title: string;
+    header: string;
 }
 
-const { title, header } = Astro.props;
+const {title, header} = Astro.props;
 ---
 
 <Layout title={title}>
-	<main>
-		<div class="pageContainerTemplate">
-			<NavBar />
-			<div>
-				<div class="pageContainerHeader">
-					<h1 class="title">{header}</h1>
-				</div>
-				<div>
-					<slot />
-				</div>
-			</div>
-			
-		</div>
-	</main>
+    <main>
+        <div class="pageContainerTemplate">
+            <NavBar/>
+            <div class="gridContainer">
+                <div class="pageContainerHeader">
+                    <h1 class="title">{header}</h1>
+                </div>
+                <div>
+                    <slot/>
+                </div>
+            </div>
+
+        </div>
+    </main>
 </Layout>

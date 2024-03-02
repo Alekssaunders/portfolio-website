@@ -1,114 +1,130 @@
 ---
 type TJob = {
-  title: string;
-  organisation: string;
-  date: string;
-  description: string;
-  skills: string[];
+    title: string;
+    organisation: string;
+    date: string;
+    description: string;
+    skills: string[];
 };
 
 const job: TJob[] = [
-  {
-    title: "Software Engineer",
-    organisation: `Mason's Guide, Tired Eye Ltd.`,
-    date: "June 2023 - Present",
-    description:
-      "I am currently developing an AI-powered generative travel guide.",
-    skills: ["Typescript", "Python", "React", "Django", "Vite", "Vitest"],
-  },
-  {
-    title: "Junior software engineer",
-    organisation: "Fast Familiar",
-    date: "March 2023 - Present",
-    description:
-      "I have assisted in the installation of an interactive AI artwork, 'Looking for Love', across multiple gallery spaces, including the Science Gallery, London, and The Exchange, Birmingham. This involved developing auto-start software to allow for easy, remote maintenance of raspberry-pi devices, and physical installation testing. Risk assessment and user-testing were also key to ensure the installation was successfully complete and met all necessary accessibility regulations.",
-    skills: ["Python", "Bash"],
-  },
-  {
-    title: "Researcher",
-    organisation: `Cancer Research UK`,
-    date: "February 2023 - Present",
-    description:
-      "I currently lead on multiple projects related to cancer prevention within the Social and Behavioural Research Team. This involves identifying evidence gaps and designing robust research projects to address them, in order to inform policies on public health and cancer prevention. Conducting statistical analysis on large datasets is a key part of my role, and includes - among other responsibilities - drafting analysis plans and liasing with data scientists within the charity.",
-    skills: ["R", "Python"],
-  },
-  {
-    title: "Evaluation Lead",
-    organisation: `Maudsley Learning, NHS`,
-    date: "September 2019 - January 2023",
-    description:
-      "As Evaluation Lead, I managed and conducted multiple research and evaluation projects within the NHS, disseminating our findings through academic publications and articles. I also supervised multiple interns, placement students, and junior researchers, helping to develop personal and professional skills while managing workloads and overseeing project completions.",
-    skills: ["R", "Python"],
-  },
+    {
+        title: "Software Engineer",
+        organisation: `Mason's Guide, Tired Eye Ltd.`,
+        date: "June 2023 - Present",
+        description:
+            "I am currently developing an AI-powered generative travel guide.",
+        skills: ["Typescript", "Python", "React", "Django", "Vite"],
+    },
+    {
+        title: "Junior software engineer",
+        organisation: "Fast Familiar",
+        date: "March 2023 - Present",
+        description:
+            "I have assisted in the installation of an interactive AI artwork, 'Looking for Love', across multiple gallery spaces, including the Science Gallery, London, and The Exchange, Birmingham. This involved developing auto-start software to allow for easy, remote maintenance of raspberry-pi devices, and physical installation testing. Risk assessment and user-testing were also key to ensure the installation was successfully complete and met all necessary accessibility regulations.",
+        skills: ["Python", "Bash"],
+    },
+    {
+        title: "Researcher",
+        organisation: `Cancer Research UK`,
+        date: "February 2023 - Present",
+        description:
+            "I currently lead on multiple projects related to cancer prevention within the Social and Behavioural Research Team. This involves identifying evidence gaps and designing robust research projects to address them, in order to inform policies on public health and cancer prevention. Conducting statistical analysis on large datasets is a key part of my role, and includes - among other responsibilities - drafting analysis plans and liasing with data scientists within the charity.",
+        skills: ["R", "Python"],
+    },
+    {
+        title: "Evaluation Lead",
+        organisation: `Maudsley Learning, NHS`,
+        date: "September 2019 - January 2023",
+        description:
+            "As Evaluation Lead, I managed and conducted multiple research and evaluation projects within the NHS, disseminating our findings through academic publications and articles. I also supervised multiple interns, placement students, and junior researchers, helping to develop personal and professional skills while managing workloads and overseeing project completions.",
+        skills: ["R", "Python"],
+    },
 ];
 ---
 
 <div class="cvContainer">
-  <div class="jobTitleContainer">
-    {
-      job.map((job) => (
-        <>
-          <h3 class="jobTitle">
-            {job.title} | {job.organisation}
-          </h3>
-          <div class="date">{job.date}</div>
-          <div class="description container">
-            <span class="description">{job.description}</span>
-            <div class="skillContainer">
-              {
-                job.skills.map((skill: string) => (
-                  <div class="skillPip">{skill}</div>
-                ))
-              }
-            </div>
-          </div>
-        </>
-      ))
-    }
-  </div>
+    <div class="jobTitleContainer">
+        {
+            job.map((job) => (
+                    <>
+                        <h3 class="jobTitle">
+                            {job.title} | {job.organisation}
+                        </h3>
+                        <div class="date">{job.date}</div>
+                        <div class="description container">
+                            <span class="description">{job.description}</span>
+                            <div class="skillContainer">
+                                {
+                                    job.skills.map((skill: string) => (
+                                            <div class="skillPip">{skill}</div>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </>
+            ))
+        }
+    </div>
 
-  <style>
-    .cvContainer {
-      margin: 0 0 0 0;
-      padding-top: var(--spacer-1xl);
-    }
+    <style>
+        .cvContainer {
+            margin: 0 0 0 0;
+            padding-top: var(--spacer-1xl);
+        }
 
-    .jobTitleContainer {
-      color: #e4eef9;
-      font-size: 110%;
-    }
+        .jobTitleContainer {
+            color: #e4eef9;
+            font-size: 110%;
+        }
 
-    .jobTitle {
-      margin: 0;
-    }
+        .jobTitle {
+            margin: 0;
+        }
 
-    .date {
-      color: #cfdbe9;
-      font-style: italic;
-      padding: var(--spacer-m) 0;
-    }
+        .date {
+            color: #cfdbe9;
+            font-style: italic;
+            padding: var(--spacer-m) 0;
+        }
 
-    .description {
-      color: #cfdbe9;
-      padding-bottom: var(--spacer-2xl);
-      font-weight: 200;
-      line-height: 150%;
-    }
+        .description {
+            color: #cfdbe9;
+            padding-bottom: var(--spacer-2xl);
+            font-weight: 200;
+            line-height: 150%;
+        }
 
-    .skillPip {
-      background-color: rgba(255, 255, 255, 0.2);
-      text-align: center;
-      padding: var(--spacer-s) var(--spacer-m);
-      margin-top: var(--spacer-m);
-      border-radius: 10px;
-      text-shadow: #b5b3b3 0 0 5px;
-      color: white;
-      width: fit-content;
-    }
-    
-    .skillContainer {
-      display: flex;
-      gap: var(--spacer-m);
-    }
-  </style>
+        .skillPip {
+            background-color: rgba(255, 255, 255, 0.2);
+            text-align: center;
+            padding: var(--spacer-s) var(--spacer-m);
+            margin-top: var(--spacer-m);
+            border-radius: 10px;
+            text-shadow: #b5b3b3 0 0 5px;
+            color: white;
+            width: fit-content;
+        }
+
+        .skillContainer {
+            display: flex;
+            gap: var(--spacer-m);
+        }
+
+
+        @media only screen and (max-width: 915px) {
+            .cvContainer {
+                margin: 0 0 0 var(--spacer-2xl);
+                padding-top: var(--spacer-1xl);
+            }
+        }
+
+        @media only screen and (max-width: 805px) {
+            .cvContainer {
+                margin: 0 0 0 var(--spacer-xl);
+                padding-top: var(--spacer-1xl);
+            }
+        }
+
+    </style>
 </div>

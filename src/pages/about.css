@@ -37,3 +37,29 @@
   grid-template-columns: 1fr 1fr;
   gap: var(--spacer-2xl);
 }
+
+@media only screen and (max-width: 915px) {
+  .aboutPageTemplate {
+    margin-left: var(--spacer-2xl);
+  }
+}
+
+@media only screen and (max-width: 805px) {
+  .aboutPageTemplate {
+    margin-left: var(--spacer-xl);
+  }
+
+  .photoContainer {
+    grid-row: 1 / 2;
+  }
+
+  .textBoxContent {
+    grid-row: 2 / 3;
+  }
+
+  .aboutPageTemplate {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacer-l);
+  }
+}
