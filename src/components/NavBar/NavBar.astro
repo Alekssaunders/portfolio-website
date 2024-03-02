@@ -11,7 +11,7 @@ const navbar = [
 ];
 ---
 
-<div class="navLinksContainers">
+<div class="navLinkContainer">
   {
     navbar.map((navbar) => (
       <ul>
@@ -40,8 +40,37 @@ const navbar = [
   }
 
   .navLink:hover {
-    color: #ffa9b7;
-    font-size: 150%;
-    transition: all 500ms;
+      color: #ffa9b7;
+      font-size: 150%;
+      transition: all 500ms;
   }
+
+  @media only screen and (max-width: 860px) {
+      .navLinkContainer{
+          height: fit-content;
+      }
+      .navList {
+          float: left;
+      }
+
+      .navLink {
+          padding: var(--spacer-l);
+      }
+  }
+
+  @media only screen and (max-width: 705px) {
+      .navList {
+          float: right;
+          display: inline;
+      }
+
+      .navLink {
+          padding: var(--spacer-l);
+      }
+
+      .navLinkContainer {
+          grid-column: 2 / 3;
+      }
+  }
+
 </style>
