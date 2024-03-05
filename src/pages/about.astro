@@ -1,7 +1,5 @@
 ---
-import Page from '../layouts/Page.astro';
 import "./about.css";
-import NavBar from "../components/NavBar/NavBar.astro";
 import CV from "../components/CV/CV.astro";
 import {Image} from "astro:assets";
 import aboutMePhoto from "../assets/images/AboutMePhoto.jpg";
@@ -17,7 +15,7 @@ const hobbies: string[] = [
 ];
 ---
 
-<ResponsivePage>
+<ResponsivePage title="Aleks Saunders Portfolio - About">
     <div class="aboutPageContainer">
         <div class="headerBlock">
             <h1 class="aboutTitle">about me.</h1>
