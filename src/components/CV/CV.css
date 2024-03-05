@@ -59,7 +59,7 @@
 
 @media only screen and (max-width: 840px) {
   .cvContainer {
-    padding-left: var(--spacer-xl);
-    padding-right: var(--spacer-xl);
+    padding-left: var(--spacer-1xl);
+    padding-right: var(--spacer-1xl);
   }
 }
