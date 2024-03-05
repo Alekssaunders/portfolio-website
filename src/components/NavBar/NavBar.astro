@@ -26,6 +26,10 @@ const navbar = [
 </div>
 
 <style>
+    .navListContainer {
+        grid-area: 1 / 2;
+    }
+
     .navList {
         list-style: none;
         font-size: 112.5%;
@@ -35,7 +39,6 @@ const navbar = [
     .navLink {
         color: #cbd5e0;
         text-decoration: none;
-        font-size: 115%;
         transition: all 500ms;
     }
 
@@ -45,19 +48,14 @@ const navbar = [
         transition: all 500ms;
     }
 
-
-    @media only screen and (max-width: 915px) {
+    @media only screen and (max-width: 1010px) {
         .navList {
             float: right;
-            display: inline;
+            grid-row: 1 / 2;
         }
 
         .navLink {
             padding: var(--spacer-l);
-        }
-
-        .navLinkContainer {
-            grid-column: 2 / 3;
         }
     }
 

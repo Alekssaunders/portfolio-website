@@ -1,0 +1,24 @@
+---
+import Layout from './Layout.astro';
+import NavBar from '../components/NavBar/NavBar.astro';
+import "./ResponsivePage.css";
+
+interface Props {
+    title: string;
+    header: string;
+}
+
+const {title, header} = Astro.props;
+---
+
+<Layout title={title}>
+    <main>
+        <div class="pageContainerTemplate">
+            <NavBar/>
+            <div>
+                <slot/>
+            </div>
+        </div>
+    </main>
+</Layout>
+

@@ -1,45 +1,45 @@
-.pageDivider {
+.frontPageContainer {
   display: grid;
-  grid-template-columns: 1.2fr max-content 5fr;
+  grid-template-columns: max-content 1fr;
 }
 
-.pageContainer {
-  padding-left: var(--spacer-m);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: max-content;
-  gap: var(--spacer-xl);
-}
-
-.textContainer {
+.frontPageTextContainer {
   width: 100%;
   max-width: 500px;
-  font-size: 115%;
   color: #cbd5e0;
   font-weight: 200;
+  padding-top: var(--spacer-s);
 }
 
-.welcomeBlock {
-  width: fit-content;
-  margin-left: -70px;
-}
-
-.welcomeSkillsGrid {
+.textAndSkillsGrid {
   display: grid;
   grid-template-columns: max-content 1fr;
   gap: var(--spacer-4xl);
   width: fit-content;
 }
 
+.headerBlock {
+  width: fit-content;
+  margin-left: -70px;
+}
+
+.textContainer {
+  width: 100%;
+  max-width: 500px;
+  color: #cbd5e0;
+  font-weight: 200;
+  padding: var(--spacer-l) 0 0 var(--spacer-l);
+}
+
 .title {
   color: #f29559;
-  font-size: 625%;
+  font-size: 550%;
   margin-bottom: 0;
 }
 
 .subtitle {
   color: #f2d492;
-  font-size: 312.5%;
+  font-size: 280%;
   margin: 0;
 }
 
@@ -84,70 +84,20 @@
   width: 231px;
 }
 
-@media only screen and (max-width: 1350px) {
-  .welcomeSkillsGrid {
-    display: grid;
-    grid-template-rows: max-content 1fr;
-    width: fit-content;
-    gap: var(--spacer-xl);
+@media only screen and (max-width: 1430px) {
+  .textAndSkillsGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacer-l);
   }
+}
 
-  .skillsBox {
-    grid-row: 2 / 3;
+@media only screen and (max-width: 1010px) {
+  .frontPageContainer {
+    padding-left: var(--spacer-3xl);
   }
 
   .aleksImage {
-    padding-top: var(--spacer-4xl);
-  }
-
-  .pageContainer {
-    padding-left: var(--spacer-xl);
-  }
-
-  @media only screen and (max-width: 915px) {
-    .pageDivider {
-      display: grid;
-      grid-template-columns: 0.5fr 1fr;
-      grid-template-rows: max-content 1fr;
-    }
-
-    .title {
-      margin-top: 10px;
-    }
-
-    .pageContainer {
-      padding-left: var(--spacer-xl);
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: max-content;
-      gap: var(--spacer-1xl);
-    }
-
-    .aleksImage {
-      grid-column: 1 / 2;
-      padding-top: var(--spacer-3xl);
-      padding-left: var(--spacer-2xl);
-    }
-  }
-  .welcomeSkillsGrid {
-    display: grid;
-    grid-column: 1 / 2;
-    grid-template-rows: max-content 1fr;
-    width: fit-content;
-    gap: var(--spacer-xl);
-  }
-
-  @media only screen and (max-width: 830px) {
-    .aleksImage {
-      padding-left: var(--spacer-1xl);
-    }
-  }
-  .textContainer {
-    width: 100%;
-    max-width: 400px;
-    font-size: 115%;
-    color: #cbd5e0;
-    font-weight: 200;
+    padding-left: var(--spacer-1xl);
   }
 
   .title {
@@ -155,57 +105,55 @@
   }
 }
 
-@media only screen and (max-width: 705px) {
-  .pageDivider {
+@media only screen and (max-width: 890px) {
+  .frontPageContainer {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: max-content 1fr;
+    grid-template-columns: min-content min-content;
+    padding-left: 0;
+  }
 
-    .welcomeBlock {
-      width: fit-content;
-      margin-left: 0;
-    }
+  .frontPageTextContainer {
+    grid-column: 1 /2;
+    grid-row: 1/2;
+  }
 
-    .pageContainer {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-      gap: var(--spacer-m);
-    }
+  .aleksImage {
+    grid-column: 2 / 3;
+    grid-row: 1/2;
+  }
 
-    .textContainer {
-      width: 100%;
-      max-width: 200px;
-    }
+  .textContainer {
+    max-width: 400px;
+  }
 
-    .aleksImage {
-      padding-left: var(--spacer-2xl);
-      padding-top: var(--spacer-6xl);
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-    }
+  .headerBlock {
+    margin-left: var(--spacer-l);
+  }
 
-    .title {
-      margin-top: 0;
-    }
+  .title {
+    margin-top: 0;
+  }
 
-    .subtitle {
-      margin-top: -15px;
-    }
+  .subtitle {
+    margin-top: -15px;
+  }
 
-    .skillsBox {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-row: 2 / 3;
-      gap: var(--spacer-m);
-    }
+  .pixelArt {
+    height: 550px;
+    width: 211px;
+  }
+}
 
-    .aleksImage {
-      margin-top: var(--spacer-xl);
-    }
+@media only screen and (max-width: 565px) {
+  .frontPageContainer {
+    grid-template-columns: 220px 200px;
+  }
 
-    .pixelArt {
-      height: 550px;
-      width: 211px;
-    }
+  .textContainer {
+    font-size: 120%;
+  }
+
+  .textAndSkillsGrid {
+    grid-template-columns: min(250px);
   }
 }
