@@ -1,0 +1,12 @@
+.pageContainerTemplate {
+  display: grid;
+  grid-template-columns: max(250px) 1fr;
+}
+
+@media only screen and (max-width: 1010px) {
+  .pageContainerTemplate {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    grid-template-columns: 1fr;
+  }
+}

@@ -2,7 +2,40 @@
   margin-top: 0;
 }
 
-.textBoxContent {
+.headerBlock {
+  text-align: right;
+  margin: var(--spacer-xl) 220px var(--spacer-2xl) 0;
+  padding: 0;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.aboutTitle {
+  font-size: 580%;
+  color: #f2d492;
+  margin: 0;
+}
+
+.textAndPhotoContainer {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding-left: var(--spacer-2xl);
+}
+
+.photoContainer {
+  width: 419px;
+  justify-self: left;
+  padding-left: var(--spacer-3xl);
+}
+
+.photo {
+  height: 450px;
+  width: 419px;
+}
+
+.textBoxContainer {
   font-size: 120%;
   color: #cbd5e0;
   font-weight: 200;
@@ -22,44 +55,57 @@
   color: pink;
 }
 
-.photoContainer {
-  width: 419px;
-  justify-self: flex-end;
-}
+@media only screen and (max-width: 1100px) {
+  .textAndPhotoContainer {
+    padding-left: var(--spacer-s);
+  }
 
-.photo {
-  height: 450px;
-  width: 419px;
-}
+  .headerBlock {
+    margin: var(--spacer-m) 220px var(--spacer-1xl) 0;
+    padding: 0;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
 
-.aboutPageTemplate {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacer-2xl);
-}
-
-@media only screen and (max-width: 915px) {
-  .aboutPageTemplate {
-    margin-left: var(--spacer-2xl);
+  .photoContainer {
+    padding-left: var(--spacer-m);
   }
 }
 
-@media only screen and (max-width: 805px) {
-  .aboutPageTemplate {
-    margin-left: var(--spacer-xl);
+@media only screen and (max-width: 1010px) {
+  .textAndPhotoContainer {
+    padding-left: var(--spacer-2xl);
+  }
+
+  .photoContainer {
+    padding-left: var(--spacer-2xl);
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .textAndPhotoContainer {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    padding-left: 0;
   }
 
   .photoContainer {
     grid-row: 1 / 2;
+    padding-left: 0;
+    place-self: center;
   }
 
-  .textBoxContent {
+  .textBoxContainer {
     grid-row: 2 / 3;
+    padding: var(--spacer-xl) var(--spacer-1xl) 0 var(--spacer-1xl);
   }
 
-  .aboutPageTemplate {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacer-l);
+  .headerBlock {
+    text-align: center;
+    margin: var(--spacer-m) 0 var(--spacer-m) 0;
+    padding: 0;
   }
 }
