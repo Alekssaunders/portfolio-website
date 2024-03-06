@@ -146,7 +146,7 @@
 
 @media only screen and (max-width: 565px) {
   .frontPageContainer {
-    grid-template-columns: 220px 200px;
+    grid-template-columns: 220px max-content;
   }
 
   .textContainer {
