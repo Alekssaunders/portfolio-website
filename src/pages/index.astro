@@ -7,57 +7,111 @@ import GithubIcon from "../assets/images/GithubIcon.svg";
 import PixelAleksGlow from "../assets/images/PixelAleksGlow.png";
 import SkillsList from '../components/SkillsList/SkillsList.astro';
 ---
+
 <ResponsivePage title="Aleks Saunders Portfolio">
-    <div class="frontPageContainer">
-        <div class="aleksImage">
+    <div class="indexGrid">
+        <div class="indexImageColumn">
             <Image
                     src={PixelAleksGlow}
                     alt="pixel sprite drawing of me standing holding a macbook"
-                    class="pixelArt"
+                    class="indexPixelArt"
             />
         </div>
-        <div class="frontPageTextContainer">
-            <div class="headerBlock">
-                <h1 class="title">hello.</h1>
-                <h2 class="subtitle">my name is aleks.</h2>
+        <div class="indexBodyContainer">
+            <div class="indexHeaderBlock">
+                <h1 class="indexTitle">hello.</h1>
+                <h2 class="indexSubtitle">my name is aleks.</h2>
             </div>
-            <div class="textAndSkillsGrid">
-                <div class="textContainer">
-                    <p class="textBoxContent">
-                        Hey there! I'm Aleks and I'm a full-stack engineer from London, UK.</p>
-                    <p>
-                        I enjoy making creative, scalable, and user-friendly products that leave a lasting impression.
-                    </p>
-                    <p>
-                        Following a career change from psychology, I'm continually pushing my own boundaries to craft
-                        simple but effective code.
-                    </p>
-                    <p>
-                        Oh, and I have cute dog called Mason.
-                    </p>
-                    <div class="iconContainer">
-                        <a href="https://www.linkedin.com/in/aleks-saunders-93219a198/"
-                        >
-                            <Image src={LinkedinIcon} alt="LinkedIn Icon" class="icon"/>
-                        </a
-                        >
-                        <a href="https://github.com/alekssaunders"
-                        >
-                            <Image src={GithubIcon} alt="Github Icon" class="icon"/>
-                        </a
-                        >
-                    </div>
-                    <div class="artCredit">
-                        <p>
-                            art by <a
-                                href="https://ashleykerins.wixsite.com/ashkerins/"
-                                class="artistName">ash kerins</a
-                        >
-                        </p>
-                    </div>
+
+            <div class="indexTextContainer">
+                <p class="textBoxContent">
+                    Hey there! I'm Aleks and I'm a full-stack engineer from London, UK.</p>
+                <p>
+                    I enjoy making creative, scalable, and user-friendly products that leave a lasting impression.
+                </p>
+                <p>
+                    Following a career change from psychology, I'm continually pushing my own boundaries to craft
+                    simple but effective code.
+                </p>
+                <p>
+                    Oh, and I have cute dog called Mason.
+                </p>
+                <div class="indexIconContainer">
+                    <a href="https://www.linkedin.com/in/aleks-saunders-93219a198/">
+                        <Image src={LinkedinIcon} alt="LinkedIn Icon" class="indexIcon"/>
+                    </a>
+                    <a href="https://github.com/alekssaunders">
+                        <Image src={GithubIcon} alt="Github Icon" class="indexIcon"/>
+                    </a>
                 </div>
-                <SkillsList/>
+                <div class="indexArtCredit">
+                    <p>
+                        art by <a
+                            href="https://ashleykerins.wixsite.com/ashkerins/"
+                            class="artistName">ash kerins</a
+                    >
+                    </p>
+                </div>
             </div>
+        </div>
+        <div class="indexSkillsColumn">
+            <SkillsList/>
         </div>
     </div>
 </ResponsivePage>
+
+
+<!--<ResponsivePage title="Aleks Saunders Portfolio">-->
+<!--    <div class="frontPageContainer">-->
+<!--        <div class="aleksImage">-->
+<!--            <Image-->
+<!--                    src={PixelAleksGlow}-->
+<!--                    alt="pixel sprite drawing of me standing holding a macbook"-->
+<!--                    class="pixelArt"-->
+<!--            />-->
+<!--        </div>-->
+<!--        <div class="frontPageTextContainer">-->
+<!--            <div class="headerBlock">-->
+<!--                <h1 class="title">hello.</h1>-->
+<!--                <h2 class="subtitle">my name is aleks.</h2>-->
+<!--            </div>-->
+<!--            <div class="textAndSkillsGrid">-->
+<!--                <div class="textContainer">-->
+<!--                    <p class="textBoxContent">-->
+<!--                        Hey there! I'm Aleks and I'm a full-stack engineer from London, UK.</p>-->
+<!--                    <p>-->
+<!--                        I enjoy making creative, scalable, and user-friendly products that leave a lasting impression.-->
+<!--                    </p>-->
+<!--                    <p>-->
+<!--                        Following a career change from psychology, I'm continually pushing my own boundaries to craft-->
+<!--                        simple but effective code.-->
+<!--                    </p>-->
+<!--                    <p>-->
+<!--                        Oh, and I have cute dog called Mason.-->
+<!--                    </p>-->
+<!--                    <div class="iconContainer">-->
+<!--                        <a href="https://www.linkedin.com/in/aleks-saunders-93219a198/"-->
+<!--                        >-->
+<!--                            <Image src={LinkedinIcon} alt="LinkedIn Icon" class="icon"/>-->
+<!--                        </a-->
+<!--                        >-->
+<!--                        <a href="https://github.com/alekssaunders"-->
+<!--                        >-->
+<!--                            <Image src={GithubIcon} alt="Github Icon" class="icon"/>-->
+<!--                        </a-->
+<!--                        >-->
+<!--                    </div>-->
+<!--                    <div class="artCredit">-->
+<!--                        <p>-->
+<!--                            art by <a-->
+<!--                                href="https://ashleykerins.wixsite.com/ashkerins/"-->
+<!--                                class="artistName">ash kerins</a-->
+<!--                        >-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <SkillsList/>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</ResponsivePage>-->

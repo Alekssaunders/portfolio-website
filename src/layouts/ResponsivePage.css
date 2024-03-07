@@ -1,12 +1,27 @@
-.pageContainerTemplate {
+.responsivePagePageContainer {
+  border: 1px solid red;
   display: grid;
-  grid-template-columns: max(250px) 1fr;
+  grid-template-columns: 200px 1fr;
+  min-height: 100vh;
+  min-width: fit-content;
 }
 
-@media only screen and (max-width: 1010px) {
-  .pageContainerTemplate {
-    display: grid;
-    grid-template-rows: min-content 1fr;
+.responsivePageNavContainer {
+  padding: var(--spacer-2xl) 0 0 var(--spacer-xl);
+}
+
+.responsivePageMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1050px) {
+  .responsivePagePageContainer {
     grid-template-columns: 1fr;
+  }
+
+  .responsivePageNavContainer {
+    padding: var(--spacer-l) var(--spacer-l) 0;
   }
 }
