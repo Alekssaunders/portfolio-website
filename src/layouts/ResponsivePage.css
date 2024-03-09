@@ -1,9 +1,9 @@
 .responsivePagePageContainer {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   display: grid;
-  grid-template-columns: 200px 1fr;
-  min-height: 100vh;
-  min-width: fit-content;
+  grid-template-columns: 100px 1fr;
+  width: 100%;
+  overflow: hidden;
 }
 
 .responsivePageNavContainer {
@@ -11,6 +11,7 @@
 }
 
 .responsivePageMain {
+  /*border: 1px dotted white;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +20,7 @@
 @media only screen and (max-width: 1050px) {
   .responsivePagePageContainer {
     grid-template-columns: 1fr;
+    /*padding: 0 var(--spacer-l);*/
   }
 
   .responsivePageNavContainer {

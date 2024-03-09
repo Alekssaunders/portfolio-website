@@ -28,15 +28,25 @@ const navbar = [
     }
 
     .navBarContainer {
-        border: 1px solid purple;
+        //border: 1px solid purple;
         display: flex;
         flex-direction: column;
         gap: var(--spacer-m);
     }
 
     .navBarPip {
-        border: 1px solid yellow;
+        //border: 1px solid yellow;
         width: fit-content;
+        color: #cbd5e0;
+        text-decoration: none;
+        transition: all 500ms;
+        font-size: 20px;
+    }
+
+    .navBarPip:hover {
+        color: #ffa9b7;
+        font-size: 150%;
+        transition: all 500ms;
     }
 
     @media only screen and (max-width: 1050px) {
@@ -56,17 +66,7 @@ const navbar = [
     //    padding-top: var(--spacer-l);
     //}
     //
-    //.navLink {
-    //    color: #cbd5e0;
-    //    text-decoration: none;
-    //    //transition: all 500ms;
-    //}
-    //
-    ////.navLink:hover {
-    ////    color: #ffa9b7;
-    ////    font-size: 150%;
-    ////    transition: all 500ms;
-    ////}
+
     //
     //@media only screen and (max-width: 1010px) {
     //    .navList {
