@@ -1,4 +1,6 @@
 ---
+import "./SkillsList.css";
+
 type TSkills = {
     skillType: string;
     name: string[];
@@ -36,56 +38,3 @@ const skills: ({ skillType: string; name: string[] })[] = [
         ))
     }
 </div>
-
-<style>
-    .skillsBox {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        column-gap: var(--spacer-3xl);
-        row-gap: var(--spacer-l);
-    }
-
-    .column {
-        flex: 50%;
-    }
-
-    .skillList {
-        color: #cbd5e0;
-        list-style: none;
-        padding-top: var(--spacer-m);
-        height: max-content;
-    }
-
-    .skillListContainer {
-        margin-top: 0;
-        padding-left: 0;
-    }
-
-    .skillSubtitle {
-        font-size: 110%;
-        margin-top: 0;
-        margin-bottom: 0;
-        font-weight: bold;
-        color: #c9c19f;
-    }
-
-    @media only screen and (max-width: 1430px) {
-        .skillsBox {
-            grid-row: 2 / 3;
-            grid-template-columns: 1fr 1fr 1fr;
-            padding-left: var(--spacer-l);
-            column-gap: var(--spacer-3xl);
-        }
-
-
-        @media only screen and (max-width: 890px) {
-            .skillsBox {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr;
-            }
-        }
-    }
-
-</style>
-

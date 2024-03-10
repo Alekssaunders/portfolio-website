@@ -6,54 +6,99 @@ import aboutMePhoto from "../assets/images/AboutMePhoto.jpg";
 import ResponsivePage from "../layouts/ResponsivePage.astro";
 
 const hobbies: string[] = [
-    "Health Advocate",
-    "Painter",
-    "Foodie",
-    "Runner",
-    "Hiker",
-    "Researcher",
+    "» Health Advocate",
+    "» Painter",
+    "» Foodie",
+    "» Runner",
+    "» Hiker",
+    "» Researcher",
 ];
 ---
 
 <ResponsivePage title="Aleks Saunders Portfolio - About">
-    <div class="aboutPageContainer">
-        <div class="headerBlock">
-            <h1 class="aboutTitle">about me.</h1>
-        </div>
-        <div class="textAndPhotoContainer">
-            <div class="textBoxContainer">
-                <p class="aboutIntroText">
-                    With two degrees in psychology and a background in scientific
-                    research, I'm always on the hunt to learn more.
-                </p>
-                <p>
-                    Software engineering first caught my eye from a data analysis angle,
-                    and evolved to become a love of simply making <i>things</i> - both in
-                    the front- and back-end.
-                </p>
-                <p>
-                    In my spare time I enjoy (hate) pushing my own limits in silly running
-                    and hiking challenges. Have you ever tried walking the perimeter of the
-                    Isle of Wight in two days? I wouldn't recommend it.
-                </p>
-                <div class="column">
-                    <ul class="hobbyListContainer">
-                        {
-                            hobbies.map((hobby: string) => (
-                                    <li class="hobbyList">{hobby}</li>
-                            ))
-                        }
-                    </ul>
+    <div class="indexGrid">
+        <div class="aboutBodyContainer">
+            <div class="aboutHeaderBlock">
+                <h1 class="aboutTitle">about me.</h1>
+            </div>
+            <div class="aboutTextAndPhotoContainer">
+                <div class="aboutTextContainer">
+                    <p class="aboutIntroText">
+                        With two degrees in psychology and a background in scientific
+                        research, I'm always on the hunt to learn more.
+                    </p>
+                    <p>
+                        Software engineering first caught my eye from a data analysis angle,
+                        and evolved to become a love of simply making <i>things</i> - both in
+                        the front- and back-end.
+                    </p>
+                    <p>
+                        In my spare time I enjoy (hate) pushing my own limits in silly running
+                        and hiking challenges. Have you ever tried walking the perimeter of the
+                        Isle of Wight in two days? I wouldn't recommend it.
+                    </p>
+                    <div class="column">
+                        <ul class="aboutHobbyListContainer">
+                            {
+                                hobbies.map((hobby: string) => (
+                                        <li class="aboutHobbyList">{hobby}</li>
+                                ))
+                            }
+                        </ul>
+                    </div>
+                </div>
+                <div class="aboutPhotoContainer">
+                    <Image
+                            src={aboutMePhoto}
+                            class="aboutPhoto"
+                            alt="a bust-high photo of me smiling towards the camera and standing on a snowy mountain"
+                    />
                 </div>
             </div>
-            <div class="photoContainer">
-                <Image
-                        src={aboutMePhoto}
-                        class="photo"
-                        alt="a bust-high photo of me smiling towardas the camera and standing on a snowy mountain"
-                />
-            </div>
+            <CV/>
         </div>
-        <CV/>
     </div>
+
+    <!--<div class="aboutPageContainer">-->
+    <!--    <div class="headerBlock">-->
+    <!--        <h1 class="aboutTitle">about me.</h1>-->
+    <!--    </div>-->
+
+
+    <!--    <div class="textAndPhotoContainer">-->
+    <!--        <div class="textBoxContainer">-->
+    <!--            <p class="aboutIntroText">-->
+    <!--                With two degrees in psychology and a background in scientific-->
+    <!--                research, I'm always on the hunt to learn more.-->
+    <!--            </p>-->
+    <!--            <p>-->
+    <!--                Software engineering first caught my eye from a data analysis angle,-->
+    <!--                and evolved to become a love of simply making <i>things</i> - both in-->
+    <!--                the front- and back-end.-->
+    <!--            </p>-->
+    <!--            <p>-->
+    <!--                In my spare time I enjoy (hate) pushing my own limits in silly running-->
+    <!--                and hiking challenges. Have you ever tried walking the perimeter of the-->
+    <!--                Isle of Wight in two days? I wouldn't recommend it.-->
+    <!--            </p>-->
+    <!--            <div class="column">-->
+    <!--                <ul class="hobbyListContainer">-->
+    <!--                    {-->
+    <!--                        hobbies.map((hobby: string) => (-->
+    <!--                                <li class="hobbyList">{hobby}</li>-->
+    <!--                        ))-->
+    <!--                    }-->
+    <!--                </ul>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="photoContainer">-->
+    <!--            <Image-->
+    <!--                    src={aboutMePhoto}-->
+    <!--                    class="photo"-->
+    <!--                    alt="a bust-high photo of me smiling towards the camera and standing on a snowy mountain"-->
+    <!--            />-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--    <CV/>-->
+    <!--</div>-->
 </ResponsivePage>
