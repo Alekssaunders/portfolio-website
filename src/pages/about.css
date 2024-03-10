@@ -1,9 +1,7 @@
 .indexGrid {
   display: grid;
-  /*border: 1px solid pink;*/
   grid-template-rows: 1fr max-content;
   max-width: 900px;
-  /*padding-left: var(--spacer-2xl);*/
 }
 
 .aboutIntroText {
@@ -12,8 +10,6 @@
 
 .aboutHeaderBlock {
   text-align: right;
-  /*border: 1px solid green;*/
-  /*margin-right: -70px;*/
 }
 
 .aboutTitle {
@@ -29,7 +25,6 @@
 
 .aboutTextContainer {
   font-weight: 200;
-  /*border: 1px solid yellow;*/
   grid-row: 2;
   padding: var(--spacer-l) var(--spacer-2xl) 0 0;
 }
@@ -52,7 +47,6 @@
 .aboutPhotoContainer {
   justify-self: left;
   grid-row: 2;
-  /*border: 1px solid purple;*/
 }
 
 .aboutPhoto {
@@ -73,7 +67,6 @@
 
   .aboutHeaderBlock {
     text-align: center;
-    /*border: 1px solid green;*/
   }
 
   .aboutTitle {

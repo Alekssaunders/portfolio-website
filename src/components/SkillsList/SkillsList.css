@@ -28,3 +28,10 @@
   font-weight: bold;
   color: #c9c19f;
 }
+
+@media only screen and (max-width: 815px) {
+  .skillsBox {
+    grid-template-columns: 1fr 2fr;
+    column-gap: var(--spacer-l);
+  }
+}
