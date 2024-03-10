@@ -3,7 +3,8 @@
   display: grid;
   grid-template-columns: 100px 1fr;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
+  padding: 0 var(--spacer-m);
 }
 
 .responsivePageNavContainer {

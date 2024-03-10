@@ -1,43 +1,38 @@
 .cvContainer {
-    margin-top: var(--spacer-l);
+  margin-top: var(--spacer-l);
 }
 
 .jobTitleContainer {
-    color: #e4eef9;
+  color: #e4eef9;
 }
 
 .jobTitle {
-    margin: 0;
+  margin: 0;
 }
 
 .date {
-    color: #cfdbe9;
-    font-style: italic;
-    padding: var(--spacer-m) 0;
+  color: #cfdbe9;
+  font-style: italic;
+  padding: var(--spacer-m) 0;
 }
 
 .description {
-    padding-bottom: var(--spacer-2xl);
-    line-height: 150%;
-    font-weight: 200;
+  padding-bottom: var(--spacer-2xl);
+  line-height: 150%;
+  font-weight: 200;
 }
 
 .skillPip {
-    background-color: rgba(255, 255, 255, 0.2);
-    text-align: center;
-    padding: var(--spacer-s) var(--spacer-m);
-    margin-top: var(--spacer-m);
-    border-radius: 10px;
-    text-shadow: #b5b3b3 0 0 5px;
-    color: white;
-    width: fit-content;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-top: var(--spacer-m);
+  border-radius: 10px;
+  text-shadow: #b5b3b3 0 0 5px;
+  color: white;
+  width: fit-content;
 }
 
 .skillContainer {
-    display: flex;
-    gap: var(--spacer-s);
+  display: flex;
+  gap: var(--spacer-s);
 }
-
-/*.cvContainer {*/
-/*  margin: var(--spacer-l) var(--spacer-l);*/
-/*}*/
